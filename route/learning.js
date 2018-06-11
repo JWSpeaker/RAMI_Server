@@ -4,7 +4,7 @@ var learning = function(req, res){
 
     //run python program
     var exec = require('child_process').exec;
-    exec('node -v', function(err, stdout, stderr){
+    exec('python3 ./BayesianFilter/module.py ./public/', function(err, stdout, stderr){
         if(err){
             cosnole.log('child process error');
         }
@@ -12,8 +12,6 @@ var learning = function(req, res){
             console.log(stdout);
         }
     });
-
-    res.redirect('./public/w_data.json');
 };
 
 
