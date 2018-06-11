@@ -1,6 +1,6 @@
 
-var leaning = function(req, res){
-    console.log("/leaning(get)");
+var learning = function(req, res){
+    console.log("/learning(get)");
 
     //run python program
     var exec = require('child_process').exec;
@@ -13,8 +13,8 @@ var leaning = function(req, res){
         }
     });
 
-    res.redirect('./public/package.json');
+    res.redirect('./public/w_data.json');
 };
 
 
-module.exports.leaning = leaning;
+module.exports.learning = learning;

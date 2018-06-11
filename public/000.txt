@@ -1,0 +1,124 @@
+/*
+#include"dog.h"
+#include"jindog.h"
+
+
+
+
+int main(){
+	Dog* j = new Jindog();
+	j->performBark();
+	return 0;
+}
+*/
+#include<cstdio>
+#include<vector>
+#include<cmath>
+
+using namespace std;
+
+class Node{
+public:
+	int x, y, r;
+	vector<class Node *> child;
+	Node(int x, int y, int z) : x(x), y(y), r(z){};
+	~Node(){
+
+
+
+	}
+};
+
+class Tree{
+	Node* head = nullptr;
+
+
+
+	bool Check(Node* par, Node* child){
+		if ((pow(par->x, 2) - pow(child->x, 2)) + (pow(par->y, 2) - pow(child->y, 2)) < pow(par->r, 2)){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+public:
+	Tree(){
+	
+	}
+	~Tree(){
+
+	}
+	void Add(Node* n){
+		if (head == nullptr){
+			head = n; return;
+		}
+		Node* curr = head;
+
+		while (curr){
+			for (int i = 0; i < curr->child.size(); i++){
+				if (Check((Node*)curr->child[i], n)){
+					
+				}
+
+			}
+
+
+			if (Check(curr, n)){
+
+			}
+
+
+
+
+
+		}
+
+
+
+
+
+	}
+
+
+
+};
+
+
+int GRAPH[100][100];
+int X[100];
+int Y[100];
+int R[100];
+
+
+//A > B = true
+int isCovered(int a, int b){
+	int dis = pow(X[a] - X[b], 2) + pow(Y[a] + Y[b], 2);
+	int r = pow(R[a] - R[b], 2);
+	if (dis <= r) return true;
+	else return false;
+}
+
+int main() {
+	int T;
+	scanf("%d", &T);
+	while (T--){
+		int N;
+		scanf("%d", &N);
+		for (int i = 0; i < N; i++){
+			int x, y, r;
+			scanf("%d%d%d", &X[i], &Y[i], &R[i]);
+
+		}
+
+
+
+
+
+	}
+
+
+
+}
+
